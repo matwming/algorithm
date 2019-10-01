@@ -4,8 +4,8 @@
 |           return indices of the two numbers such that they add up to a specific target.
 |--------------------------------------------------
 */
-const nums = [2, 7, 11, 15];
-const target = 9; //should return [0,1]
+const nums = [3, 2, 3];
+const target = 6; //should return [0,1]
 
 /**
 |--------------------------------------------------
