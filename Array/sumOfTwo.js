@@ -4,22 +4,26 @@
 |           return indices of the two numbers such that they add up to a specific target.
 |--------------------------------------------------
 */
-const nums = [2, 7, 11, 15];
-const target = 9; //should return [0,1]
+const nums = [3, 2, 3];
+const target = 6; //should return [0,1]
 
-const twoSum = array => {
- const copiedNums = [...array];
- copiedNums.sort((a, b) => a - b);
- let bigNum = [];
- nums.forEach((el, index) => {
-  if (el > target) {
-   bigNum.push(el);
+const twoSum = (nums, target) => {
+ let first = "";
+ let second = "";
+ for (let i = 0; i < nums.length; i++) {
+  if (nums.includes(Math.abs(target - nums[i]))) {
+   first = nums[i];
+   second = Math.abs(target - first);
   }
- });
- let bigNumIndex = copiedNums.findIndex((el, index) => {
-  el === bigNum[0];
- });
- let arrayArea = copiedNums.slice(0, bigNumIndex - 1);
- console.log(arrayArea);
+ }
+ if (first > second) {
+  first = second;
+  second = Math.abs(target - first);
+ }
+ let firstIndex = nums.findIndex(el => el == first);
+ nums.splice(firstIndex, 1);
+ let secondIndex = nums.findIndex(el => el === second);
+ secondIndex++;
+ return [firstIndex, secondIndex];
 };
-twoSum(nums);
+console.log(twoSum(nums, target));
