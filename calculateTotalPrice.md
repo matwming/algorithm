@@ -1,4 +1,4 @@
-## Find the total Price based on product price and available prices
+## Find the total purchase Price based on product price and available discounts
 * Input parameters:
     * products: it is a two-dimensional array;
         * First parameter in each products[index]: it is the product price
