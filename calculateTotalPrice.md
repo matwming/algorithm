@@ -12,8 +12,7 @@
          discounts which are '0','1','2';
             * "0": means this product is selling at discounts[index][2];
             * "1": means this product is selling at discounts[index][2] by
-             percentage. 
-             For instance, ['mqWkDhF', '1', '29'] '29' means it
+             percentage. For instance,in ['mqWkDhF', '1', '29'] '29' means it
               is selling at 29% off. Remember to round it to the nearest integer
             * "2": means this product is selling at discounts[index][2] off
             . For instance, ['hDr', '2', '403'] '403' means it is selling at
